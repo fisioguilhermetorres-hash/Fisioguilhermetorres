@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Torres - Fisioterapeuta</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        :root { --azul-principal: #1e40af; --azul-escuro: #1e3a8a; --azul-claro: #3b82f6; --azul-bg: #f0f7ff; --branco: #fff; }
+        body { background: var(--azul-bg); color: #333; line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--azul-principal), var(--azul-escuro)); color: var(--branco); padding: 0.8rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; }
+        .logo { font-size: 1.2rem; font-weight: bold; }
+        .nav-menu { display: flex; list-style: none; gap: 1.5rem; }
+        .nav-menu a { color: var(--branco); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        .hero { background: linear-gradient(rgba(30,64,175,0.8), rgba(30,58,138,0.8)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; color: var(--branco); padding: 120px 2rem 60px; text-align: center; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero h1 { font-size: 2rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        .cta-button { display: inline-block; background: var(--branco); color: var(--azul-principal); padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .cta-button:hover { transform: translateY(-2px); }
+        .servicos { padding: 60px 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; color: var(--azul-escuro); margin-bottom: 3rem; font-size: 1.8rem; }
+        .servicos-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .servico-card { background: var(--branco); padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid var(--azul-claro); transition: transform 0.3s; }
+        .servico-card:hover { transform: translateY(-5px); }
+        .servico-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .servico-card h3 { color: var(--azul-escuro); margin-bottom: 1rem; }
+        .areas { background: var(--azul-escuro); color: var(--branco); padding: 60px 2rem; }
+        .areas-container { max-width: 1200px; margin: 0 auto; }
+        .cidades { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+        .cidade-grupo h4 { color: var(--azul-claro); margin-bottom: 1rem; }
+        .contato { padding: 60px 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+        .whatsapp-button { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: var(--branco); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 1rem 0; transition: transform 0.3s; }
+        .whatsapp-button:hover { transform: translateY(-2px); }
+        .info-contato { background: var(--branco); padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 2rem; }
+        .info-contato p { margin: 1rem 0; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .registro-creffito { background: var(--azul-bg); padding: 1rem; border-radius: 5px; margin-top: 1rem; border-left: 4px solid var(--azul-claro); }
+        footer { background: var(--azul-escuro); color: var(--branco); text-align: center; padding: 2rem; margin-top: 2rem; }
+        @media (min-width: 768px) { .servicos-grid, .cidades { grid-template-columns: repeat(2, 1fr); } .nav-menu { display: flex !important; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">Guilherme Torres</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#areas">Áreas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>Fisioterapeuta Guilherme Torres</h1>
+        <p>Cuidando da sua saúde e mobilidade com atendimento especializado em fisioterapia ortopédica, esportiva e domiciliar para idosos</p>
+        <a href="https://wa.me/5511974573100?text=Olá! Gostaria de agendar uma consulta com o Fisioterapeuta Guilherme Torres" class="cta-button" target="_blank">Agendar Consulta</a>
+    </section>
+
+    <section class="servicos" id="servicos">
+        <h2 class="section-title">Serviços Especializados</h2>
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <div class="servico-icon">🏥</div>
+                <h3>Fisioterapia Ortopédica</h3>
+                <p>Tratamento de lesões musculoesqueléticas, recuperação pós-cirúrgica e reabilitação de fraturas</p>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">⚽</div>
+                <h3>Fisioterapia Esportiva</h3>
+                <p>Prevenção e tratamento de lesões esportivas, preparação física e retorno seguro às atividades</p>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">👵</div>
+                <h3>Fisioterapia Domiciliar</h3>
+                <p>Atendimento especializado para idosos no conforto de casa, com foco em mobilidade e qualidade de vida</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="areas" id="areas">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Atendimento</h2>
+            <div class="cidades">
+                <div class="cidade-grupo">
+                    <h4>São Paulo - Capital</h4>
+                    <p>Região Central</p>
+                    <p>Zona Oeste</p>
+                </div>
+                <div class="cidade-grupo">
+                    <h4>Grande São Paulo</h4>
+                    <p>Alphaville</p>
+                    <p>Barueri</p>
+                    <p>Osasco</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2 class="section-title">Entre em Contato</h2>
+        <p>Agende sua consulta ou tire suas dúvidas</p>
+        
+        <a href="https://wa.me/5511974573100?text=Olá! Gostaria de agendar uma consulta com o Fisioterapeuta Guilherme Torres" class="whatsapp-button" target="_blank">📱 WhatsApp</a>
+        
+        <div class="info-contato">
+            <p>📞 Telefone/WhatsApp: (11) 97457-3100</p>
+            <p>📧 E-mail: fisioguilhermetorres@gmail.com</p>
+            <p>⏰ Horário de Atendimento: Segunda a Sexta, 8h às 18h</p>
+            
+            <div class="registro-creffito">
+                <p>📄 CREFITO-3: 437134-F</p>
+                <small>Fisioterapeuta registrado e regulamentado pelo Conselho Regional de Fisioterapia e Terapia Ocupacional</small>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Guilherme Torres - Fisioterapeuta. Todos os direitos reservados.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">CREFITO-3: 437134-F | Cuidando da sua saúde com excelência e dedicação</p>
+    </footer>
+</body>
+</html>
